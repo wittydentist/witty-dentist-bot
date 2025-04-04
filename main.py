@@ -27,7 +27,34 @@ headers = {
 }
 
 def is_dental_related(text):
-    keywords = ["tooth", "teeth", "gum", "cavity", "braces", "dentist", "floss", "implant", "mouth", "jaw", "oral"]
+    keywords = keywords = ["tooth", "teeth", "gum", "cavity", "braces", "dentist", "floss", "implant",
+    "mouth", "jaw", "oral", "enamel", "plaque", "tartar", "root canal",
+    "wisdom tooth", "orthodontics", "periodontics", "prosthodontics", "x-ray",
+    "crown", "bridge", "veneers", "extraction", "cleaning", "toothache",
+    "denture", "sealant", "pulp", "bite", "occlusion", "filling", "retainer",
+    "anesthesia", "scaling", "infection", "abscess", "gingivitis", "halitosis",
+    "molars", "incisors", "canines", "premolars", "dental hygiene",
+    "mouthwash", "sensitivity", "radiograph", "oral surgeon", "dental assistant",
+    "dental nurse", "dental chair", "air-water syringe", "handpiece", "composite",
+    "amalgam", "etchant", "bonding", "rubber dam", "saliva ejector", "curing light",
+    "matrix band", "explorer", "periodontal probe", "dental mirror", "suction",
+    "bitewing", "panoramic x-ray", "periapical", "impression", "alginate", "tray",
+    "model", "articulator", "temporomandibular joint", "mouthguard", "night guard",
+    "fluoride", "desensitizer", "bleaching", "whitening", "laser dentistry",
+    "bone graft", "sinus lift", "ridge preservation", "dental lab", "hygienist",
+    "oral pathology", "eruption", "decay", "debridement", "edentulous", "cement",
+    "liner", "inlay", "onlay", "CAD/CAM", "zirconia", "lithium disilicate", "biopsy",
+    "bruxism", "pericoronitis", "apicoectomy", "resection", "splint", "gutta-percha",
+    "irrigation", "endodontics", "dental explorer", "laser", "caries detection",
+    "intraoral camera", "interdental brush", "orthodontic wire", "elastics",
+    "dental dam clamp", "retractor", "bite registration", "jaw relation",
+    "vertical dimension", "shade guide", "esthetic dentistry", "pediatric dentistry",
+    "geriatric dentistry", "forensic dentistry", "dental materials",
+    "impression material", "tray adhesive", "polyether", "silicone impression",
+    "artificial teeth", "framework", "occlusal rim", "facebow", "vestibule",
+    "keratinized tissue", "papilla", "alveolar bone", "socket", "osteotomy",
+    "healing cap", "abutment", "implant screw", "torque wrench", "ridge mapping",
+    "CBCT", "digital scan", "IOS (intraoral scanner)", "3D printing", "provisional crown"]
     return any(word in text.lower() for word in keywords)
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
